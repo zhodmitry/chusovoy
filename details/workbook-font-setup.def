@@ -1,0 +1,45 @@
+\IfFontExistsTF{Times New Roman}{%
+	\setmainfont{Times New Roman}%
+}{\IfFontExistsTF{Liberation Serif}{%
+	\setmainfont{Liberation Serif}%
+}{\IfFontExistsTF{Times}{%
+	\setmainfont{Times}%
+}}}
+
+\IfFontExistsTF{Liberation Mono}{%
+	\setmonofont{Liberation Mono}%
+}{\IfFontExistsTF{Courier New}{%
+	\setmonofont{Courier New}%
+}{\IfFontExistsTF{Courier}{%
+	\setmonofont{Courier}%
+}{\IfFontExistsTF{Consolas}{%
+	\setmonofont{Consolas}%
+}{\IfFontExistsTF{Hack}{%
+	\setmonofont{Hack}%
+}}}}}
+
+\IfFontExistsTF{Arial}{%
+	\setsansfont{Arial}%
+}{\IfFontExistsTF{Liberation Sans}{%
+	\setsansfont{Liberation Sans}%
+}{\IfFontExistsTF{Helvetica}{%
+	\setsansfont{Helvetica}%
+}{\IfFontExistsTF{FreeSans}{%
+	\setsansfont{FreeSans}%
+}{\IfFontExistsTF{TeX Gyre Heros}{%
+	\setsansfont{TeX Gyre Heros}%
+}}}}}
+
+\let\ttfamily@old\ttfamily
+\newcommand{\ttfamily@set}[2]{\renewcommand{\ttfamily}{\ttfamily@old\fontsize{#1}{#2}\selectfont}}
+
+\def\tiny{\fontsize{7pt}{8.4pt}\selectfont\ttfamily@set{6pt}{8.4pt}}
+\def\scriptsize{\fontsize{8pt}{9.6pt}\selectfont\ttfamily@set{7pt}{9.6pt}}
+\def\footnotesize{\fontsize{9pt}{10.8pt}\selectfont\ttfamily@set{8pt}{10.8pt}}
+\def\small{\fontsize{11pt}{13.2pt}\selectfont\ttfamily@set{9pt}{13.2pt}}
+\def\normalsize{\fontsize{12pt}{14.4pt}\selectfont\ttfamily@set{10pt}{14.4pt}}
+\def\large{\fontsize{14pt}{16.8pt}\selectfont\ttfamily@set{12pt}{16.8pt}}
+\def\Large{\fontsize{16pt}{19.2pt}\selectfont\ttfamily@set{14pt}{19.2pt}}
+\def\LARGE{\fontsize{17.28pt}{21.6pt}\selectfont\ttfamily@set{16pt}{21.6pt}}
+\def\huge{\fontsize{20pt}{24pt}\selectfont\ttfamily@set{17.28pt}{24pt}}
+\def\Huge{\fontsize{22pt}{26.4pt}\selectfont\ttfamily@set{20pt}{26.4pt}}
